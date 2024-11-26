@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Serif+Pro:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#141414] text-white font-['Poppins'];
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#E50914] hover:bg-[#B81D24] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E50914];
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2 border border-gray-600 text-sm font-medium rounded-md text-gray-300 bg-[#2F2F2F] hover:bg-[#3F3F3F] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
+  }
+
+  .card {
+    @apply bg-[#1F1F1F] rounded-lg shadow-lg overflow-hidden hover:ring-2 hover:ring-gray-500 transition-all duration-200;
+  }
+
+  .news-title {
+    @apply font-['Playfair_Display'] text-3xl font-bold text-white mb-4 leading-tight;
+  }
+
+  .news-excerpt {
+    @apply font-['Source_Serif_Pro'] text-lg text-gray-300 leading-relaxed;
+  }
+
+  .news-meta {
+    @apply text-sm text-gray-400;
+  }
+
+  .news-category {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[#E50914] text-white;
+  }
+
+  .ebook-card {
+    @apply bg-[#1F1F1F] rounded-lg overflow-hidden hover:ring-2 hover:ring-gray-500 transition-all duration-200;
+  }
+
+  .ebook-card-image {
+    @apply w-full aspect-[2/3] object-cover transition-transform duration-300 group-hover:scale-105;
+  }
+
+  .ebook-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity;
+  }
+
+  .ebook-card-content {
+    @apply p-4 bg-[#1F1F1F];
+  }
+
+  .course-card {
+    @apply bg-[#1F1F1F] rounded-lg overflow-hidden hover:ring-2 hover:ring-gray-500 transition-all duration-200;
+  }
+
+  .course-card-image {
+    @apply w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105;
+  }
+
+  .course-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity;
+  }
+
+  .course-card-content {
+    @apply p-6 bg-[#1F1F1F];
+  }
+
+  .stat-icon {
+    @apply w-5 h-5;
+  }
+}
+
+.prose {
+  @apply text-gray-300;
+  @apply prose-headings:font-['Playfair_Display'] prose-headings:text-white;
+  @apply prose-p:font-['Source_Serif_Pro'] prose-p:text-gray-300;
+  @apply prose-strong:text-white;
+  @apply prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl;
+  @apply prose-p:text-lg prose-p:leading-relaxed;
+  @apply prose-a:text-blue-400 prose-a:no-underline hover:prose-a:text-blue-300;
+  @apply prose-blockquote:border-[#E50914] prose-blockquote:text-gray-300;
+  @apply prose-pre:bg-[#1F1F1F] prose-code:text-gray-300;
+}
